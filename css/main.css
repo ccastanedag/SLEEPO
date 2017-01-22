@@ -1,0 +1,48 @@
+/*-----------------------------------
+VIDEO BACKGROUND
+------------------------------------*/
+
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg-video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9){
+  .fullscreen-bg-video{
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9){
+  .fullscreen-bg-video{
+    width: auto;
+    height: 100%;
+  }
+}
+
+@media (max-width: 767px){
+  .fullscreen-bg{
+    background: url("../img/video.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .fullscreen-bg-video{
+    display: none;
+  }
+}
