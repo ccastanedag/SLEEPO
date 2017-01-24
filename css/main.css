@@ -55,13 +55,17 @@ VIDEO BACKGROUND
 /*------------------------------------------------
 SLEEPO FORM
 ------------------------------------------------*/
+body {
+  margin: 0;
+}
 
 .main-container {
   display: flex;
-  height: 98vh;
+  min-height: 98vh;
   justify-content: center;
   align-content: center;
   flex-direction: column;
+
 }
 
 /*Social Networks*/
@@ -92,26 +96,62 @@ SLEEPO FORM
 
 .sleepo-form {
   background-color: rgba(40,44,52,0.8);
-  margin-bottom: auto;
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding:4em 0;
+  min-height: 94vh;
 }
 
 /* Logo */
 
 .logo {
-  width: 65%;
+  width: 60%;
   max-width: 300px;
-  margin-top: auto;
+}
+
+.single-column,
+.double-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2em;
+  width: 85%;
+  margin-bottom: auto;
+}
+
+.double-column {
+ justify-content: space-around;
+  margin-top: inherit;
+  flex: 1;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line {
+  min-width: 250px;
+  height: 1px;
+  background-color: rgb(42,127,255);
+  margin: 4.5em 0;
+  align-self: center;
 }
 
 p {
-  width: 85%;
   color: rgb(171,178,191);
   text-align: justify;
+}
+
+h1,h2 {
+  color: rgb(171,178,191);
+  font-weight: bold;
+}
+
+h2 {
+  margin-right: auto;
 }
 
 /* Font colors for paragraphs*/
@@ -132,12 +172,149 @@ p {
 .button {
   background-color: rgb(42,127,255);
   color: rgb(171,178,191);
+  font-size: 1.5em;
   font-weight: bold;
   border: 0;
-  padding-left: 2.5em;
-  padding-right: 2.5em;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
   margin-top: auto;
-  margin-bottom: 18%;
+}
+
+/*Steps Links*/
+.steps {
+  width: 50%;
+  max-width: 170px;
+  display: flex;
+  padding-left: 0;
+  justify-content: space-around;
+  margin: 0;
+  margin-top: 1em;
+  align-items: center;
+
+}
+
+.steps li{
+  list-style: none;
+  display: flex;
+  margin:0;
+  min-width: 35px;
+  max-width: 35px;
+
+}
+
+/*Grey Circles*/
+.steps li:nth-child(2n+1):not(.selected) {
+  border: 5px solid rgb(171,178,191);
+  border-radius: 100%;
+  min-height: 35px;
+  max-height: 35px;
+}
+
+/*Grey Connectors*/
+.steps li:nth-child(2n+2){
+  background-color: rgb(171,178,191);
+
+  min-height: 5px;
+  max-height: 5px;
+}
+
+.steps a {
+  color: rgb(171,178,191);
+  font-weight: bold;
+  text-decoration: none;
+  margin: auto;
+}
+
+/*Blue Circles*/
+.steps li:nth-child(2n+1).selected{
+  border: 5px solid rgb(42,127,255);
+  border-radius: 100%;
+  min-height: 35px;
+  max-height: 35px;
+}
+
+/*Blue Connectors*/
+.steps li:nth-child(2n+2).selected{
+  background-color: rgb(42,127,255);
+}
+
+a.selected{
+  color: rgb(42,127,255);
+}
+
+/*------------------------------------------
+MEDIA QUERIES
+--------------------------------------------*/
+@media screen and (min-width:700px) {
+  .double-column {
+    flex-direction: row;
+    padding: 0 1.5em;
+  }
+
+  .column {
+    align-self: stretch;
+    flex: 1;
+  }
+
+
+  .line {
+
+    /*Reset the mobile's values*/
+    min-width: inherit;
+    height: inherit;
+    margin: 0;
+    align-self:auto;
+
+    /*Apply the values for tablet and desktop*/
+    width: 1px;
+    min-height: 250px;
+    background-color: rgb(42,127,255);
+    margin: 0 4.5em ;
+  }
+
+  .double-column .button {
+    margin-top: auto;
+  }
+}
+
+@media screen and (min-width:1024px){
+  .main-container{
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .social-networks{
+    flex-direction: column;
+  }
+
+  .social-networks > div{
+    width: 50px;
+    flex:1;
+    margin: 0.5em 0;
+  }
+
+  .sleepo-form {
+    margin:inherit;
+    max-width: 900px;
+    height: 600px;
+    align-content: space-between;
+    box-shadow: 0 0 30px -2px rgb(40,44,25);
+  }
+
+  .single-column {
+    width: 55%;
+  }
+
+
+
+
+
+
+
+
+
+
+
 }
