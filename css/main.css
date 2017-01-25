@@ -244,6 +244,49 @@ a.selected{
   color: rgb(42,127,255);
 }
 
+/*Mobile Animations Forms*/
+/*.hide {
+  display: none;
+}*/
+
+body{
+  position: relative;
+}
+
+.main-container {
+  display: none;
+  position: absolute;
+  top:0;
+  right:0;
+  left:0;
+}
+
+.show {
+  display: flex;
+}
+
+/*This simple animations only applies for mobiles and tables devices
+Desktops will have a more complex transitions animations*/
+
+.in {
+  animation: in 500ms ease-in-out forwards;
+}
+
+.out {
+  animation: out 500ms ease-in-out forwards;
+}
+
+@keyframes in {
+  0% {transform:translateX(100%);}
+  100% {transform:translateX(0px);}
+}
+
+@keyframes out {
+  0% {transform:translateX(0px);}
+  100% {transform:translateX(-100%);}
+}
+
+
 /*------------------------------------------
 MEDIA QUERIES
 --------------------------------------------*/
@@ -307,9 +350,25 @@ MEDIA QUERIES
     width: 55%;
   }
 
+  /*Forms Transition Animations - Desktop Version*/
 
+  .in {
+    animation: in-desktop 500ms ease-in-out forwards;
+  }
 
+  .out {
+    animation: out-desktop 500ms ease-in-out forwards;
+  }
 
+  @keyframes in-desktop {
+    0% {transform:translateY(100%);}
+    100% {transform:translateY(0px);}
+  }
+
+  @keyframes out-desktop {
+    0% {transform:translateY(0px);}
+    100% {transform:translateY(-100%);}
+  }
 
 
 
