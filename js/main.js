@@ -1,5 +1,6 @@
 $(document).ready(function(){
   counterStep = "step0";
+  $('.step0').addClass('show');
   $('.show').addClass('in');
 
   function stepForward(aCurrentStep , aNextStep){
@@ -10,20 +11,17 @@ $(document).ready(function(){
       + Show the current step form using the SHOW class
       + Use the new step form and call the IN animation
     */
-    // alert("Estoy en el paso "+aCurrentStep+" y me voy al paso "+aNextStep);
-     currentForm = $(".show");
-     currentForm.addClass('out');
-     currentForm.removeClass('in');
+    currentForm = $(".show");
+    currentForm.addClass('out');
+    currentForm.removeClass('in');
 
-     setTimeout(function() {
-      currentForm.removeClass('show');
-
+    setTimeout(function(){
       counterStep = aNextStep;
       currentForm = $("."+counterStep);
       currentForm.addClass('show');
       currentForm.addClass('in');
       currentForm.removeClass('out');
-    }, 500);
+    }, 300);
 
 
   }
