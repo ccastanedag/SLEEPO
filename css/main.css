@@ -1,4 +1,9 @@
 /*-----------------------------------
+GOOGLE FONTS
+------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Questrial');
+
+/*-----------------------------------
 VIDEO BACKGROUND
 ------------------------------------*/
 
@@ -143,11 +148,13 @@ body {
 p {
   color: rgb(171,178,191);
   text-align: justify;
+  font-family: 'Arial';
 }
 
 h1,h2 {
   color: rgb(171,178,191);
   font-weight: bold;
+  font-family: 'Arial';
 }
 
 h2 {
@@ -225,6 +232,7 @@ h2 {
   font-weight: bold;
   text-decoration: none;
   margin: auto;
+  font-family: 'Questrial', sans-serif;
 }
 
 /*Blue Circles*/
