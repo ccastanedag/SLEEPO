@@ -8,6 +8,7 @@
     <meta name="author" content="Carlos Castañeda G.">
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" href="css/main.css">
@@ -31,9 +32,11 @@
         <img src="img/logo.svg" alt="sleepo-logo" class="logo">
         <div class="single-column">
           <p><span class="bold">SLEEPO</span> works by counting backwards in <span class="bold">sleep cycles</span>.  Waking up in the middle of a sleep cycle leaves you feeling <span class="red bold">tired and groggy</span>, but waking up in between cycles wakes you up feeling <span class="green bold">freshed and alert!</span></p>
-          <p>This web app will help you to calculate the perfect time you should go sleep and wake up to start your day with full energy.</p>
+          <p>This web app will help you to calculate the perfect time you should go to sleep and wake up to start your day with full energy!.</p>
+          <p><span class="bold">It takes just 10 seconds !</span></p>
         </div>
-        <button data-nextstep="step1" class="button">START</button>
+        <!-- <a class="waves-effect waves-teal btn-flat">START</a> -->
+        <button data-nextstep="step1" class="button blue accent-3 waves-effect waves-blue waves-light btn-large">START</button>
       </div>
       <div class="social-networks">
         <div class="facebook"></div>
@@ -55,20 +58,158 @@
           <li></li>
           <li><a href="#">3</a></li>
         </ul>
-        <h1>Choose Option</h1>
+        <h1>CHOOSE OPTION</h1>
         <div class="double-column">
           <div class="column">
-            <h2>To Sleep</h2>
-            <p>If you know when you want to wake up, but not when you should go to sleep, choose this option.</p>
-            <button data-nextstep="step2a" class="button">NEXT</button>
+            <h2>Know when to fall asleep</h2>
+            <p>If you know when you want to wake up, but not when you should fall asleep, choose this option.</p>
+            <button data-nextstep="step2a" class="button blue accent-3 waves-effect waves-blue waves-light btn-large">NEXT</button>
+            <!-- <button data-nextstep="step2a" class="button">NEXT</button> -->
           </div>
           <div class="line"></div>
           <div class="column">
-            <h2>To Wake up</h2>
-            <p>If you know when you want to fall asleep, but not when you should wake up, choose this option.</p>
-            <button data-nextstep="step2b" class="button">NEXT</button>
+            <h2>Know when to wake up</h2>
+            <p>If you know when you'll fall asleep, but not when you should wake up, choose this option.</p>
+            <button data-nextstep="step2b" class="button blue accent-3 waves-effect waves-blue waves-light btn-large">NEXT</button>
+            <!-- <button data-nextstep="step2b" class="button">NEXT</button> -->
           </div>
         </div>
+      </div>
+      <div class="social-networks">
+        <div class="facebook"></div>
+        <div class="twitter"></div>
+        <div class="google-plus"></div>
+      </div>
+    </div>
+
+    <!-- ********************************************************************* -->
+
+    <!-- Form Step 2a/3 -->
+    <div class="main-container step2a">
+      <div class="sleepo-form">
+        <img src="img/logo.svg" alt="sleepo-logo" class="logo">
+        <ul class="steps">
+          <li><a href="#">1</a></li>
+          <li class="selected"></li>
+          <li class="selected"><a class="selected" href="#">2</a></li>
+          <li class="selected"></li>
+          <li><a href="#">3</a></li>
+        </ul>
+        <div class="single-column">
+          <h2>I have to wake up at...</h2>
+          <div class="time-section">
+            <div class="input-field">
+             <select>
+               <option value="" disabled selected>(hour)</option>
+               <option value="1">01</option>
+               <option value="2">02</option>
+               <option value="3">03</option>
+               <option value="4">04</option>
+               <option value="5">05</option>
+               <option value="6">06</option>
+               <option value="7">07</option>
+               <option value="8">08</option>
+               <option value="9">09</option>
+               <option value="10">10</option>
+               <option value="11">11</option>
+               <option value="12">12</option>
+             </select>
+            </div>
+           <div class="input-field">
+            <select>
+              <option value="" disabled selected>(minute)</option>
+              <option value="0">00</option>
+              <option value="5">05</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+              <option value="25">25</option>
+              <option value="30">30</option>
+              <option value="35">35</option>
+              <option value="40">40</option>
+              <option value="45">45</option>
+              <option value="50">50</option>
+              <option value="55">55</option>
+            </select>
+            </div>
+            <div class="input-field">
+             <select>
+               <option value="" disabled selected>(AM/PM)</option>
+               <option value="am">AM</option>
+               <option value="pm">PM</option>
+             </select>
+            </div>
+          </div>
+        </div>
+        <button data-nextstep="step3a" class="button blue accent-3 waves-effect waves-blue waves-light btn-large">CALCULATE</button>
+      </div>
+      <div class="social-networks">
+        <div class="facebook"></div>
+        <div class="twitter"></div>
+        <div class="google-plus"></div>
+      </div>
+    </div>
+
+    <!-- ********************************************************************* -->
+
+    <!-- Form Step 2b/3 -->
+    <div class="main-container step2b">
+      <div class="sleepo-form">
+        <img src="img/logo.svg" alt="sleepo-logo" class="logo">
+        <ul class="steps">
+          <li><a href="#">1</a></li>
+          <li class="selected"></li>
+          <li class="selected"><a class="selected" href="#">2</a></li>
+          <li class="selected"></li>
+          <li><a href="#">3</a></li>
+        </ul>
+        <div class="single-column">
+          <h2>I plan to fall asleep at...</h2>
+          <div class="time-section">
+            <div class="input-field">
+             <select>
+               <option value="" disabled selected>(hour)</option>
+               <option value="1">01</option>
+               <option value="2">02</option>
+               <option value="3">03</option>
+               <option value="4">04</option>
+               <option value="5">05</option>
+               <option value="6">06</option>
+               <option value="7">07</option>
+               <option value="8">08</option>
+               <option value="9">09</option>
+               <option value="10">10</option>
+               <option value="11">11</option>
+               <option value="12">12</option>
+             </select>
+            </div>
+           <div class="input-field">
+            <select>
+              <option value="" disabled selected>(minute)</option>
+              <option value="0">00</option>
+              <option value="5">05</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+              <option value="25">25</option>
+              <option value="30">30</option>
+              <option value="35">35</option>
+              <option value="40">40</option>
+              <option value="45">45</option>
+              <option value="50">50</option>
+              <option value="55">55</option>
+            </select>
+            </div>
+            <div class="input-field">
+             <select>
+               <option value="" disabled selected>(AM/PM)</option>
+               <option value="am">AM</option>
+               <option value="pm">PM</option>
+             </select>
+            </div>
+          </div>
+        </div>
+        <button data-nextstep="step3b" class="button blue accent-3 waves-effect waves-blue waves-light btn-large">CALCULATE</button>
       </div>
       <div class="social-networks">
         <div class="facebook"></div>

@@ -25,10 +25,16 @@ $(document).ready(function(){
 
 
   }
-
+  
+  // Allow to navigate to other steps
   $("button").click(function(){
     nextStep = $(this).data('nextstep');
     stepForward(counterStep,nextStep);
+  });
+
+  // Add the materialize behavior to select items
+  $(document).ready(function() {
+    $('select').material_select();
   });
 
 });
