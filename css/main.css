@@ -469,7 +469,7 @@ MEDIA QUERIES
 
   @keyframes in-desktop {
     0% {
-      transform:translateX(100%) translateY(-100%) rotateZ(90deg);
+      transform:translateX(100%) rotateZ(90deg);
       opacity: 0;
     }
 
@@ -478,7 +478,7 @@ MEDIA QUERIES
     }
 
     100% {
-      transform:translateX(0px) translateY(0px) rotateZ(0deg);
+      transform:translateX(0px) rotateZ(0deg);
       opacity: 1;
     }
   }
