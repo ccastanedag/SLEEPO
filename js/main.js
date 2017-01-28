@@ -82,57 +82,47 @@ $(document).ready(function(){
 
     //Move forward on those steps which dont require
     //any special calculation (step0 step1)
-    if(nextStep!=="step3a" && nextStep!=="step3b")
+    if(nextStep!=="step3")
       stepForward(counterStep,nextStep);
 
     // For thos steps which require calculations, we must first
     //validate its datafields to then use stepForward function
-    if(nextStep==="step3a")
+    if(nextStep==="step3")
     {
-      // Validate if all data field on Step 2a were set
-      correctFlag = true; // Asume all fields are set correctly
-      allSelect = $("select.select-step2a");
-      for(i=0; i<allSelect.length; i++){
-        if(allSelect[i].value === ""){
-          correctFlag = false;
+      // Validate if all data field on Step2a were set
+      if(counterStep==="step2a"){
+        correctFlag = true; // Asume all fields are set correctly
+        allSelect = $("select.select-step2a");
+        for(i=0; i<allSelect.length; i++){
+          if(allSelect[i].value === ""){
+            correctFlag = false;
+          }
+        }
+        if(!correctFlag){
+          alert("ERROR: Please enter a valid wake up time !");
+        }
+        else {
+          stepForward(counterStep,nextStep);
         }
       }
-      if(!correctFlag){
-        alert("ERROR: Please enter the time you want to wake up");
-      }
-      else {
 
-
-
-
-        // alert("Bad: "+badTime+"\n"+"Normal: "+normalTime+"\n"+"Good: "+goodTime+"\n"+"Great: "+greatTime+"\n");
-        // $(".results").filter(":hidden").append("<p>TEST</p>");
-
-        stepForward(counterStep,nextStep);
-      }
-    }
-
-    if(nextStep==="step3b")
-    {
-      // Validate if all data field on Step 2b were set
-      correctFlag = true; // asume all fields are set correctly
-      allSelect = $("select.select-step2b");
-      for(i=0; i<allSelect.length; i++){
-        if(allSelect[i].value === ""){
-          correctFlag = false;
+      // Validate if all data field on Step2b were set
+      if(counterStep==="step2b"){
+        correctFlag = true; // Asume all fields are set correctly
+        allSelect = $("select.select-step2b");
+        for(i=0; i<allSelect.length; i++){
+          if(allSelect[i].value === ""){
+            correctFlag = false;
+          }
+        }
+        if(!correctFlag){
+          alert("ERROR: Please enter a valid sleep time !");
+        }
+        else {
+          stepForward(counterStep,nextStep);
         }
       }
-      if(!correctFlag){
-        alert("ERROR: Please enter the time you plan to fall asleep");
-      }
-      else {
-        //TODO: Make Calculations to render on step 3b
-        hour = $("select[name='hour'].select-step2b option:selected").text();
-        minute= $("select[name='minute'].select-step2b option:selected").text();
-        timelapse = $("select[name='timelapse'].select-step2b option:selected").text();
-        alert("Los datos capturados son: "+hour+":"+minute+" "+timelapse);
-        stepForward(counterStep,nextStep);
-      }
+
     }
   });
 

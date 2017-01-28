@@ -80,9 +80,13 @@ body {
   justify-content: center;
 }
 
-.social-networks > div {
-  flex-basis: 100px;
+.social-networks  div {
+  width: 100px;
   height: 50px;
+}
+
+.social-networks a {
+  margin: 0 0.5em ;
 }
 
 .facebook {
@@ -95,6 +99,15 @@ body {
 
 .google-plus {
   background-color: rgb(221,75,57);
+}
+
+.facebook,
+.twitter,
+.google-plus {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*Sleepo Form*/
@@ -495,8 +508,16 @@ MEDIA QUERIES
     width: 75%;
   }
 
+  /*Social Networks - Desktop*/
 
+  .social-networks  div {
+    width: 50px;
+    height: 50px;
+  }
 
+  .social-networks a {
+    margin: 0.5em 0;
+  }
 
 
 }
