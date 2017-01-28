@@ -113,7 +113,7 @@ body {
 /*Sleepo Form*/
 
 .sleepo-form {
-  background-color: rgba(40,44,52,0.9);
+  background-color: rgba(40,44,52,0.8);
   display: flex;
   flex-direction: column;
   align-items: center;
