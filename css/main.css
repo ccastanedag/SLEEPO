@@ -331,6 +331,39 @@ li.disabled>span {
   padding: 1em;
 }
 
+/*STEP 3A mobile*/
+.results {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.collection-item {
+  color: rgba(40,44,52,0.9) !important;
+}
+
+.collection{
+  width: 90%;
+  max-width: 300px;
+  overflow: visible !important;
+  align-self: center;
+}
+
+.collection span {
+  font-weight: bold !important;
+}
+
+.collection span.green {
+  /*color: rgba(40,44,52,0.9) !important;*/
+  color: #fff !important;
+}
+
+span.badge {
+  width:5em !important;
+}
+
+
 
 /*------------------------------------------
 MEDIA QUERIES
@@ -364,6 +397,17 @@ MEDIA QUERIES
 
   .double-column .button {
     margin-top: auto;
+  }
+
+  /*STEP 3A - tablets*/
+  .results {
+    width: 55%;
+    align-content: flex-start;
+  }
+
+  .collection{
+    width: 60%;
+    align-self: center;
   }
 }
 
@@ -442,7 +486,14 @@ MEDIA QUERIES
     }
   }
 
+  /*STEP 3A Desktop*/
+  .results {
+    width: 70%;
+  }
 
+  .collection{
+    width: 75%;
+  }
 
 
 
