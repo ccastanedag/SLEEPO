@@ -31,12 +31,12 @@
       <div class="sleepo-form">
         <img src="img/logo.svg" alt="sleepo-logo" class="logo">
         <div class="single-column">
-          <p><span class="bold">SLEEPO</span> works by counting backwards in <span class="bold">sleep cycles</span>.  Waking up in the middle of a sleep cycle leaves you feeling <span class="red bold">tired and groggy</span>, but waking up in between cycles wakes you up feeling <span class="green bold">freshed and alert!</span></p>
-          <p>This web app will help you to calculate the perfect time you should go to sleep and wake up to start your day with full energy!.</p>
+          <h2>It is hard to wake up in the morning?</h2>
+          <p><span class="bold">SLEEPO</span> is a bedtime calculator that will help you to determine the perfect time you should go to sleep and wake up to start your day <span class="bold green">fresh and alert!</span></p>
           <p><span class="bold">It takes just 10 seconds !</span></p>
         </div>
         <!-- <a class="waves-effect waves-teal btn-flat">START</a> -->
-        <button data-nextstep="step1" class="button blue accent-3 waves-effect waves-blue waves-light btn-large">START</button>
+        <button data-nextstep="step1" class="button blue accent-3 waves-effect waves-blue waves-light btn-large">I WANT TO WAKE UP FRESH</button>
       </div>
       <div class="social-networks">
         <div class="facebook"></div>
@@ -61,16 +61,16 @@
         <h1>CHOOSE OPTION</h1>
         <div class="double-column">
           <div class="column">
-            <h2>Know when to fall asleep</h2>
+            <h2>What time go to bed?</h2>
             <p>If you know when you want to wake up, but not when you should fall asleep, choose this option.</p>
-            <button data-nextstep="step2a" class="button blue accent-3 waves-effect waves-blue waves-light btn-large">NEXT</button>
+            <button data-nextstep="step2a" class="button blue accent-3 waves-effect waves-blue waves-light btn-large">KNOW WHEN GO TO BED</button>
             <!-- <button data-nextstep="step2a" class="button">NEXT</button> -->
           </div>
           <div class="line"></div>
           <div class="column">
-            <h2>Know when to wake up</h2>
+            <h2>What time to wake up?</h2>
             <p>If you know when you'll fall asleep, but not when you should wake up, choose this option.</p>
-            <button data-nextstep="step2b" class="button blue accent-3 waves-effect waves-blue waves-light btn-large">NEXT</button>
+            <button data-nextstep="step2b" class="button blue accent-3 waves-effect waves-blue waves-light btn-large">KNOW WHEN WAKE UP</button>
             <!-- <button data-nextstep="step2b" class="button">NEXT</button> -->
           </div>
         </div>
@@ -99,7 +99,7 @@
           <h2>I have to wake up at...</h2>
           <div class="time-section">
             <div class="input-field">
-             <select>
+             <select class="select-step2a" name="hour">
                <option value="" disabled selected>(hour)</option>
                <option value="1">01</option>
                <option value="2">02</option>
@@ -116,7 +116,7 @@
              </select>
             </div>
            <div class="input-field">
-            <select>
+            <select class="select-step2a" name="minute">
               <option value="" disabled selected>(minute)</option>
               <option value="0">00</option>
               <option value="5">05</option>
@@ -133,7 +133,7 @@
             </select>
             </div>
             <div class="input-field">
-             <select>
+             <select class="select-step2a" name="timelapse">
                <option value="" disabled selected>(AM/PM)</option>
                <option value="am">AM</option>
                <option value="pm">PM</option>
@@ -167,7 +167,7 @@
           <h2>I plan to fall asleep at...</h2>
           <div class="time-section">
             <div class="input-field">
-             <select>
+             <select class="select-step2b" name="hour">
                <option value="" disabled selected>(hour)</option>
                <option value="1">01</option>
                <option value="2">02</option>
@@ -184,7 +184,7 @@
              </select>
             </div>
            <div class="input-field">
-            <select>
+            <select class="select-step2b" name="minute">
               <option value="" disabled selected>(minute)</option>
               <option value="0">00</option>
               <option value="5">05</option>
@@ -201,7 +201,7 @@
             </select>
             </div>
             <div class="input-field">
-             <select>
+             <select class="select-step2b" name="timelapse">
                <option value="" disabled selected>(AM/PM)</option>
                <option value="am">AM</option>
                <option value="pm">PM</option>
@@ -221,6 +221,7 @@
   </body>
   <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/moment.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
   </script>
 </html>
