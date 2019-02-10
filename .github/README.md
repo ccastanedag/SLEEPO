@@ -1,7 +1,7 @@
 ![](https://i.imgur.com/sZB2iLs.png)
 
 # SLEEPO - Bedtime Calculator
-SLEEPO is a bedtime calculator, tell it what time you want to wake up and SLEEPO will calculate the best hour you should go to sleep in order to wake up fresh and full of energy. The calculation are based on [Sleep Cycles Theory](https://en.wikipedia.org/wiki/Sleep_cycle)
+SLEEPO is a bedtime calculator, just tell it what time you want to wake up and SLEEPO will calculate the best hour you should go to sleep in order to wake up fresh and full of energy. The calculations are based on [Sleep Cycles Theory](https://en.wikipedia.org/wiki/Sleep_cycle)
 
 ## Installation
 ```
